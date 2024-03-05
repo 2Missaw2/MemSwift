@@ -7,12 +7,8 @@ C:\Users\MrWs\source\repos\MemSwift\MemSwift\obj\Debug\MemSwift.csproj.GenerateR
 C:\Users\MrWs\source\repos\MemSwift\MemSwift\obj\Debug\MemSwift.csproj.CoreCompileInputs.cache
 C:\Users\MrWs\source\repos\MemSwift\MemSwift\obj\Debug\MemSwift.exe
 C:\Users\MrWs\source\repos\MemSwift\MemSwift\obj\Debug\MemSwift.pdb
-C:\Users\MrWs\source\repos\MemSwift\MemSwift\bin\Debug\MemSwift.exe.manifest
-C:\Users\MrWs\source\repos\MemSwift\MemSwift\bin\Debug\MemSwift.application
 C:\Users\MrWs\source\repos\MemSwift\MemSwift\bin\Debug\WindowsInput.dll
 C:\Users\MrWs\source\repos\MemSwift\MemSwift\bin\Debug\WindowsInput.xml
 C:\Users\MrWs\source\repos\MemSwift\MemSwift\obj\Debug\MemSwift.Form1.resources
 C:\Users\MrWs\source\repos\MemSwift\MemSwift\obj\Debug\MemSwift.Form2.resources
-C:\Users\MrWs\source\repos\MemSwift\MemSwift\obj\Debug\MemSwift.exe.manifest
-C:\Users\MrWs\source\repos\MemSwift\MemSwift\obj\Debug\MemSwift.application
 C:\Users\MrWs\source\repos\MemSwift\MemSwift\obj\Debug\MemSwift.csproj.CopyComplete
