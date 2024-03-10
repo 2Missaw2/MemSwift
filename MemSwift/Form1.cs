@@ -19,6 +19,7 @@ namespace MemSwift
         Timer myTimer = new Timer();
         Timer myTimer2 = new Timer();
         Timer myTimer3 = new Timer();
+        Timer myTimer4 = new Timer();
 
         class GlobalHotkeys
         {
@@ -62,7 +63,14 @@ namespace MemSwift
 
         private void interval_Event(object sender, EventArgs e)
         {
+            ulong initMem = (GetAvailableMemoryInBytes() / (1024 * 1024));
             Program.EmptyWorkingSetFunc();
+            if (Settings1.Default.notification)
+            {
+                notifyIcon1.Visible = true;
+                ulong newMem = (GetAvailableMemoryInBytes() / (1024 * 1024));
+                notifyIcon1.ShowBalloonTip(3000, "Memory Optimized", "Cleared : " + (newMem - initMem) + " MB".ToString(), ToolTipIcon.Info);
+            }
         }
 
         public static void RemoveFromStartup()
@@ -105,15 +113,29 @@ namespace MemSwift
                 int id = m.WParam.ToInt32();
                 if (id == MY_HOTKEY_ID)
                 {
+                    ulong initMem = (GetAvailableMemoryInBytes() / (1024 * 1024));
                     Program.EmptyWorkingSetFunc();
+                    if (Settings1.Default.notification)
+                    {
+                        notifyIcon1.Visible = true;
+                        ulong newMem = (GetAvailableMemoryInBytes() / (1024 * 1024));
+                        notifyIcon1.ShowBalloonTip(3000, "Memory Optimized", "Cleared : " + (newMem - initMem) + " MB".ToString(), ToolTipIcon.Info);
+                    }
                 }
             }
 			base.WndProc(ref m);
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            ulong initMem = (GetAvailableMemoryInBytes() / (1024 * 1024));
             Program.EmptyWorkingSetFunc();
+            if (Settings1.Default.notification)
+            {
+                notifyIcon1.Visible = true;
+                ulong newMem = (GetAvailableMemoryInBytes() / (1024 * 1024));
+                notifyIcon1.ShowBalloonTip(3000, "Memory Optimized", "Cleared : "+(newMem - initMem)+" MB".ToString(), ToolTipIcon.Info);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -215,6 +237,7 @@ namespace MemSwift
             frm.thresh = Settings1.Default.threshold;
             frm.check3 = Settings1.Default.threshold_check;
             frm.language = Settings1.Default.lang;
+            frm.notf = Settings1.Default.notification;
             frm.ShowDialog();
         }
 
@@ -262,7 +285,17 @@ namespace MemSwift
             if (Settings1.Default.threshold_check)
             {
                 int res = Int32.Parse(label8.Text);
-                if (res > Settings1.Default.threshold) Program.EmptyWorkingSetFunc();
+                if (res > Settings1.Default.threshold)
+                {
+                    ulong initMem = (GetAvailableMemoryInBytes() / (1024 * 1024));
+                    Program.EmptyWorkingSetFunc();
+                    if (Settings1.Default.notification)
+                    {
+                        notifyIcon1.Visible = true;
+                        ulong newMem = (GetAvailableMemoryInBytes() / (1024 * 1024));
+                        notifyIcon1.ShowBalloonTip(3000, "Memory Optimized", "Cleared : " + (newMem - initMem) + " MB".ToString(), ToolTipIcon.Info);
+                    }
+                }
             }
             if (Settings1.Default.lang == "French")
             {

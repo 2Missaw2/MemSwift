@@ -23,6 +23,7 @@ namespace MemSwift
 		public bool check3 { get; set; }
 		public bool check4 { get; set; }
 		public string language { get; set; }
+		public bool notf { get; set; }
 
 		class GlobalHotkeys
 		{
@@ -72,6 +73,7 @@ namespace MemSwift
 			textBox1.Text = hotky;
 			checkBox3.Checked = check3;
 			checkBox4.Checked = check4;
+			checkBox5.Checked = notf;
 			numericUpDown1.Value = interv;
 			numericUpDown2.Value = thresh;
 			comboBox1.SelectedItem = language;
@@ -79,6 +81,7 @@ namespace MemSwift
 			{
 				checkBox1.Text = "Charger au démarrage";
 				checkBox2.Text = "Commencer minimisé";
+				checkBox5.Text = "Montrer la notification";
 				label1.Text = "Changer le raccourci clavier :";
 				label2.Text = "Optimiser quand on est au-dessus (%)";
 				label3.Text = "Optimiser chaque (min)";
@@ -90,6 +93,7 @@ namespace MemSwift
 			{
 				checkBox1.Text = "Load on startup";
 				checkBox2.Text = "Start minimized";
+				checkBox5.Text = "Show notification";
 				label1.Text = "Change the hotkey :";
 				label2.Text = "Optimise when above (%)";
 				label3.Text = "Optimise every (min)";
@@ -159,6 +163,7 @@ namespace MemSwift
 			Settings1.Default.interval_check = checkBox4.Checked;
 			Settings1.Default.threshold_check = checkBox3.Checked;
 			Settings1.Default.lang = (string)comboBox1.SelectedItem;
+			Settings1.Default.notification = checkBox5.Checked;
 			Settings1.Default.Save();
 			string hotkey = Settings1.Default.hotkey;
 			if (hotkey.StartsWith("Ctrl+")) registerNewHotKey(ConvertStringToKey(hotkey.Substring(5)), MOD_CTRL);
@@ -168,6 +173,7 @@ namespace MemSwift
 			{
 				checkBox1.Text = "Charger au démarrage";
 				checkBox2.Text = "Commencer minimisé";
+				checkBox5.Text = "Montrer la notification";
 				label1.Text = "Changer le raccourci clavier :";
 				label2.Text = "Optimiser quand on est au-dessus (%)";
 				label3.Text = "Optimiser chaque (min)";
@@ -179,6 +185,7 @@ namespace MemSwift
 			{
 				checkBox1.Text = "Load on startup";
 				checkBox2.Text = "Start minimized";
+				checkBox5.Text = "Show notification";
 				label1.Text = "Change the hotkey :";
 				label2.Text = "Optimise when above (%)";
 				label3.Text = "Optimise every (min)";

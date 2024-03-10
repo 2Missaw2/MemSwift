@@ -118,5 +118,17 @@ namespace MemSwift {
                 this["lang"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool notification {
+            get {
+                return ((bool)(this["notification"]));
+            }
+            set {
+                this["notification"] = value;
+            }
+        }
     }
 }

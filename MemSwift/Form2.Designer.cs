@@ -43,6 +43,7 @@ namespace MemSwift
 			this.checkBox4 = new System.Windows.Forms.CheckBox();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.label4 = new System.Windows.Forms.Label();
+			this.checkBox5 = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
 			this.SuspendLayout();
@@ -69,7 +70,7 @@ namespace MemSwift
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(274, 155);
+			this.button1.Location = new System.Drawing.Point(274, 182);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
 			this.button1.TabIndex = 2;
@@ -83,7 +84,6 @@ namespace MemSwift
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(112, 20);
 			this.textBox1.TabIndex = 3;
-			this.textBox1.KeyDown += textBox1_KeyDown;
 			// 
 			// label1
 			// 
@@ -150,7 +150,7 @@ namespace MemSwift
 			this.comboBox1.Items.AddRange(new object[] {
             "English",
             "French"});
-			this.comboBox1.Location = new System.Drawing.Point(112, 133);
+			this.comboBox1.Location = new System.Drawing.Point(112, 160);
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(93, 21);
 			this.comboBox1.TabIndex = 11;
@@ -159,17 +159,28 @@ namespace MemSwift
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(12, 136);
+			this.label4.Location = new System.Drawing.Point(12, 163);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(97, 13);
 			this.label4.TabIndex = 12;
 			this.label4.Text = "Select Language : ";
 			// 
+			// checkBox5
+			// 
+			this.checkBox5.AutoSize = true;
+			this.checkBox5.Location = new System.Drawing.Point(12, 127);
+			this.checkBox5.Name = "checkBox5";
+			this.checkBox5.Size = new System.Drawing.Size(107, 17);
+			this.checkBox5.TabIndex = 13;
+			this.checkBox5.Text = "Show notification";
+			this.checkBox5.UseVisualStyleBackColor = true;
+			// 
 			// Form2
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(361, 190);
+			this.ClientSize = new System.Drawing.Size(361, 217);
+			this.Controls.Add(this.checkBox5);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.comboBox1);
 			this.Controls.Add(this.checkBox4);
@@ -223,5 +234,6 @@ namespace MemSwift
 		private System.Windows.Forms.CheckBox checkBox4;
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.CheckBox checkBox5;
 	}
 }
